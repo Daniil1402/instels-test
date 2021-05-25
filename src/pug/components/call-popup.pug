@@ -1,0 +1,12 @@
+.call-popup.hidden
+  h5.popup__title Готовы обсудить проект?
+  p Заполните форму ниже и мы свяжемся с вами.
+  form
+    input(type="text" id="input-name" placeholder="Имя*" required) 
+    input(type="tel" id="input-tel" placeholder="Телефон*" required)
+    .checkbox
+      input(type="checkbox" id="checkbox")
+      span Я согласен с условиями обработки <a href="#">персональных данных</a>
+    button(type="submit" id="submit") Отправить
+  button.closePopup
+    img(src="assets/img/close.svg", class="closeMenu", alt="Close")

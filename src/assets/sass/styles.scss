@@ -1,0 +1,32 @@
+@import "fonts";
+
+a, form, button, input, textarea {
+  &:active, &:focus {
+    outline: none !important;
+    box-shadow: none !important; 
+  } 
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1140px;
+  width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+body {
+  background: #edeff3;
+}
+         
+
+@import "components/header";
+@import "components/call-popup";
+// @import components/footer
+
+// @import components/content
