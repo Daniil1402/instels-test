@@ -20,13 +20,17 @@ a, form, button, input, textarea {
   margin: 0 auto;
 }
 
-body {
-  background: #edeff3;
-}
+// body {
+//   background: #edeff3;
+//   // position: relative;
+// }
          
 
 @import "components/header";
+@import "components/hero-section";
+
 @import "components/call-popup";
+@import "components/info-popup";
 // @import components/footer
 
 // @import components/content

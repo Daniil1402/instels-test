@@ -32,25 +32,51 @@ menuButton.addEventListener("click", function() {
 //call-popup
 const callback = document.querySelector("#callback");
 const callPopup = document.querySelector(".call-popup");
-const closePopupBtn = callPopup.querySelector(".closePopup");
+const closeCall = callPopup.querySelector(".closePopup");
 
-const popupHidden = function() {
-  callPopup.classList.add("hidden");
+const popupHidden = function(popup) {
+  popup.classList.add("hidden");
 }
 
-const popupShow = function() {
-  callPopup.classList.remove("hidden");
+const popupShow = function(popup) {
+  popup.classList.remove("hidden");
 }
 
-closePopupBtn.addEventListener("click", function () {
-  popupHidden();
+closeCall.addEventListener("click", function () {
+  popupHidden(callPopup);
 });
 
 callback.addEventListener("click", function() {
   if (callPopup.classList.contains("hidden")) {
-    popupShow();
+    popupShow(callPopup);
   }
 });
 
+//info-popup
+const infoPopup = document.querySelector(".info-popup");
+const popupBtn = document.querySelector(".popupBtn");
+const closeInfo = infoPopup.querySelector(".closePopup");
 
+const computePopupCoord = function() {
+  let popupBtnRect = popupBtn.getBoundingClientRect();
+  let popupInfoRect = infoPopup.getBoundingClientRect();  
+  const topOffset = popupBtn.offsetTop;
+  const leftOffset = popupBtn.offsetLeft;
+  console.log(topOffset);
+  infoPopup.style = `top: ${topOffset - popupInfoRect.height - (popupBtnRect.height / 2)}px; left: ${(leftOffset + (popupBtnRect.width / 5)) - (popupInfoRect.width / 2)}px;`;
+};
+
+popupBtn.addEventListener("click", function () {
+  if (infoPopup.classList.contains("hidden")) {
+    popupShow(infoPopup);
+    computePopupCoord();
+  } else {
+    popupHidden(infoPopup);
+  }
+  
+});
+
+closeInfo.addEventListener("click", function () {
+  popupHidden(infoPopup);
+});
 
