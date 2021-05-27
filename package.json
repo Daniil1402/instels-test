@@ -32,5 +32,9 @@
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2",
     "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "owl.carousel": "^2.3.4",
+    "swiper": "^6.6.2"
   }
 }

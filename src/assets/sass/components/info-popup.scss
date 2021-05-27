@@ -5,6 +5,10 @@
   max-width: 350px;
   width: 100%;
   position: absolute;
+  @media (max-width: 640px) {
+    width: 290px;
+    padding: 15px;
+  }
   &.hidden {
     display: none;
   }
@@ -45,6 +49,9 @@
     position: absolute;
     top: 15px;
     right: 45px;
+    @media (max-width: 640px) {
+      right: 20px;
+    }
   }
   .closePopup {
     position: absolute;

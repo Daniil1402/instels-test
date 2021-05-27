@@ -7,6 +7,13 @@ a, form, button, input, textarea {
   } 
 }
 
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -24,6 +31,35 @@ a, form, button, input, textarea {
 //   background: #edeff3;
 //   // position: relative;
 // }
+
+.btn {
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  border-radius: 8px;
+  padding: 15px;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.btn-white {
+  border: 1px solid #FFFFFF;
+  background: transparent;
+  &:hover {
+    color: #397DFF;
+    border-color: #ececec;
+  }
+}
+.btn-blue {
+  background: #397DFF;
+  box-shadow: 0px 6px 24px rgba(85, 104, 255, 0.12);
+  border: none;
+  &:hover {
+    background: #266df1;
+  }
+}
          
 
 @import "components/header";
@@ -31,6 +67,8 @@ a, form, button, input, textarea {
 
 @import "components/call-popup";
 @import "components/info-popup";
+
+@import "components/slider-section";
 // @import components/footer
 
 // @import components/content
