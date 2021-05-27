@@ -1,4 +1,5 @@
 const header = document.querySelector(".header");
+const headerHeight = header.offsetHeight;
 
 //show menu for scroll
 let lastScrollTop = 0;
@@ -8,7 +9,7 @@ window.addEventListener("scroll", function() {
 
   if (currentScrollTop > lastScrollTop) {
     //console.log("DOWN");
-    if (currentScrollTop > 105) {
+    if (currentScrollTop > headerHeight) {
       header.classList.add("hidden");
     }
   } else {
@@ -17,6 +18,12 @@ window.addEventListener("scroll", function() {
   }
   lastScrollTop = currentScrollTop;
 });
+
+//header height
+const sliderSection = document.querySelector(".slider");
+
+sliderSection.style.paddingTop = `${headerHeight}px`
+
 
 //menu
 const menuButton = document.querySelector("#menu");
@@ -28,6 +35,9 @@ menuButton.addEventListener("click", function() {
   mobileMenu.classList.toggle("active");
   body.style.overflow = body.style.overflow === "hidden" ? "auto" : "hidden";
 });
+
+
+
 
 //call-popup
 const callback = document.querySelector("#callback");
