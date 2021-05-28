@@ -56,9 +56,17 @@ closeCall.addEventListener("click", function () {
   popupHidden(callPopup);
 });
 
-callback.addEventListener("click", function() {
-  if (callPopup.classList.contains("hidden")) {
-    popupShow(callPopup);
+// callback.addEventListener("click", function() {
+//   if (callPopup.classList.contains("hidden")) {
+//     popupShow(callPopup);
+//   }
+// });
+
+body.addEventListener("click", function (evt) {
+  if (evt.target.hasAttribute("data-callback")) {
+    if (callPopup.classList.contains("hidden")) {
+      popupShow(callPopup);
+    }
   }
 });
 

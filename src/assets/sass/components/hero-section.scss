@@ -37,6 +37,9 @@ section.hero {
     left: 21%;
     transform: translate(-30%, -10%);
     cursor: pointer;
+    &:hover {
+      filter: opacity(0.8);
+    }
     @media (max-width: 998px) {
       padding-top: 11%;
       top: -77%;

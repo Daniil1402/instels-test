@@ -18,7 +18,6 @@ const sliderBig = new Swiper('#sliderBig', {
     1080: {
       autoplay: false,
     },
-    
   }
 });
 
@@ -35,9 +34,9 @@ const sliderSmall = new Swiper('#sliderSmall', {
   allowTouchMove: false,
 });
 
-sliderSmall.on('slideChange', function () {
-  console.log('slide changed');
-});
+// sliderSmall.on('slideChange', function () {
+//   console.log('slide changed');
+// });
 
 const prevSlide = document.querySelector(".btn-prev-slide");
 const nextSlide = document.querySelector(".btn-next-slide");
