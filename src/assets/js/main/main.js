@@ -77,7 +77,6 @@ const closeInfo = infoPopup.querySelector(".closePopup");
 
 const computePopupCoord = function() {
   const windowInnerWidth = window.innerWidth
-  console.log(windowInnerWidth);
 
   let popupBtnRect = popupBtn.getBoundingClientRect();
   let popupInfoRect = infoPopup.getBoundingClientRect();  
@@ -87,14 +86,10 @@ const computePopupCoord = function() {
   if (windowInnerWidth <= 425) {
     const triangle = infoPopup.querySelector(".triangle");
     triangle.style = "display: none;"
-    infoPopup.style = `top: ${topOffset - popupInfoRect.height - (popupBtnRect.height / 2)}px; left: 50%; transform: translateX(-50%);`;
+    infoPopup.style = `top: ${topOffset - popupInfoRect.height}px; left: 50%; transform: translateX(-50%);`;
   } else {
-    infoPopup.style = `top: ${topOffset - popupInfoRect.height - (popupBtnRect.height / 2)}px; left: ${(leftOffset + (popupBtnRect.width / 2)) - (popupInfoRect.width / 2)}px;`;
+    infoPopup.style = `top: ${topOffset - popupInfoRect.height}px; left: ${(leftOffset + (popupBtnRect.width / 2)) - (popupInfoRect.width / 2)}px;`;
   }
-  
-  // console.log(topOffset);
-  // console.log(leftOffset);
-  
 };
 
 popupBtn.addEventListener("click", function () {

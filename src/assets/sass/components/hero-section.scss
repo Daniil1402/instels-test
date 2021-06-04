@@ -1,8 +1,13 @@
 section.hero {
   display: flex;
   position: relative;
+  margin-bottom: 120px;
+  @media (max-width: 768px) {
+    margin-bottom: 80px;
+  }
   @media (max-width: 425px) {
     flex-direction: column;
+    margin-bottom: 40px;
   }
   .img__left, .image__right {
     width: 100%;

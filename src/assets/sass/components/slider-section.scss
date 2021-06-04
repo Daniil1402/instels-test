@@ -3,6 +3,12 @@ section.slider {
   color: #FFFFFF;
   position: relative;
   margin-bottom: 120px;
+  @media (max-width: 768px) {
+    margin-bottom: 75px;
+  }
+  @media (max-width: 425px) {
+    margin-bottom: 40px;
+  }
   #sliderBig {
     .first, .third {
       background-image: url(../img/slide1.png);
