@@ -10,7 +10,13 @@
     z-index: 10;
     &.hidden {
 		transform: translateY(-100%);
+        @media (max-width: 425px) {
+            transform: none;
+        }
 	}
+    @media (max-width: 425px) {
+        position: absolute;
+    }
   .container {
     @media (max-width: 998px) {
         padding: 0 35px;

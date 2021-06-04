@@ -1,10 +1,4 @@
 section.slider {
-  // background-image: url(../img/slide1.png);
-  // background-repeat: no-repeat;
-  // background-position: center;
-  // background-size: cover;
-  // width: 100%;
-  // padding: 125px 0 210px;
   font-family: Montserrat, sans-serif;
   color: #FFFFFF;
   position: relative;
@@ -25,6 +19,12 @@ section.slider {
       font-family: Montserrat, sans-serif;
       color: #FFFFFF;
       width: 100%;
+      @media (max-width: 768px) {
+        padding: 75px 0;
+      }
+      @media (max-width: 375px) {
+        padding: 25px 0;
+      }
     }
     .conferenceInfo {
       span {
@@ -38,6 +38,10 @@ section.slider {
         font-size: 52px;
         line-height: 63px;
         margin-bottom: 25px;
+        @media (max-width: 425px) {
+          max-width: 300px;
+          font-size: 40px;
+        }
       }
       p {
         font-family: Montserrat, sans-serif;
@@ -50,6 +54,10 @@ section.slider {
       }
       .btn-white {
         margin-right: 25px;
+        @media (max-width: 425px) {
+         margin-right: 0;
+         margin-bottom: 10px;
+        }
       }
     }
   }
@@ -62,6 +70,9 @@ section.slider {
     right: 0;
     transform: translateY(-45%);
     z-index: 2;
+    @media (max-width: 1080px) {
+      display: none;
+    }
   }
   #sliderSmall {
     .swiper-container {

@@ -76,12 +76,25 @@ const popupBtn = document.querySelector(".popupBtn");
 const closeInfo = infoPopup.querySelector(".closePopup");
 
 const computePopupCoord = function() {
+  const windowInnerWidth = window.innerWidth
+  console.log(windowInnerWidth);
+
   let popupBtnRect = popupBtn.getBoundingClientRect();
   let popupInfoRect = infoPopup.getBoundingClientRect();  
   const topOffset = popupBtn.offsetTop;
   const leftOffset = popupBtn.offsetLeft;
-  console.log(topOffset);
-  infoPopup.style = `top: ${topOffset - popupInfoRect.height - (popupBtnRect.height / 2)}px; left: ${(leftOffset + (popupBtnRect.width / 5)) - (popupInfoRect.width / 2)}px;`;
+  
+  if (windowInnerWidth <= 425) {
+    const triangle = infoPopup.querySelector(".triangle");
+    triangle.style = "display: none;"
+    infoPopup.style = `top: ${topOffset - popupInfoRect.height - (popupBtnRect.height / 2)}px; left: 50%; transform: translateX(-50%);`;
+  } else {
+    infoPopup.style = `top: ${topOffset - popupInfoRect.height - (popupBtnRect.height / 2)}px; left: ${(leftOffset + (popupBtnRect.width / 2)) - (popupInfoRect.width / 2)}px;`;
+  }
+  
+  // console.log(topOffset);
+  // console.log(leftOffset);
+  
 };
 
 popupBtn.addEventListener("click", function () {
